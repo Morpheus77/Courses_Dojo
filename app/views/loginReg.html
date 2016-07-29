@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Form Registration Form</title>
+		<meta name="Description" content="Registration Form Norman M Smith 7/12/2016" charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" >
+	</head>
+	<body>
+		<div id="wrapper" >
+			 {%with messages = get_flashed_messages() %}
+			 {% if messages %}
+			 {% for message in messages %}
+			<p>{{message}}</p>
+			 {% endfor %}
+			 {% endif %}
+			 {% endwith %}
+				<form class ="formFormat" id="formStyle" action='/login' method='POST'>
+				Your Email:<input type='text' name='email' ></input><br>
+				First Name:<input id="textBoxName" type='text' name ='Fst_Name'></input><br>
+				Last Name:<input id="textBoxName" type='text' name ='Lst_Name'></input><br>
+				Password:	<input id="textBoxName" type='password' name ='Password'></input><br>
+				Confirm Password:<input id="commentBox" type='password' name='passvalid'></input><br>
+				<input class="button" type='submit' value='create user'>
+				
+				<form class ="formFormat" id="formStyle" action='/add_user' method='POST'>
+				Your Email:<input type='text' name='email' ></input><br>
+				First Name:<input id="textBoxName" type='text' name ='Fst_Name'></input><br>
+				Last Name:<input id="textBoxName" type='text' name ='Lst_Name'></input><br>
+				Password:	<input id="textBoxName" type='password' name ='Password'></input><br>
+				Confirm Password:<input id="commentBox" type='password' name='passvalid'></input><br>
+				<input class="button" type='submit' value='create user'>
+				
+			</form>
+		</div>
+	</body>
+</html>

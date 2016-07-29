@@ -15,7 +15,7 @@ class Courses(Controller):
 
 
 
-        self.load_model('Course')
+        self.load_model('course')
         self.db = self._app.db
 
 
@@ -25,7 +25,7 @@ class Courses(Controller):
 
    
     def index(self):
-    	return self.load_view('index.html')
+    	return self.load_view('LandingPage.html')
 
     def show(self,id):
     	course = self.models['course'].get_course_by_id(id)

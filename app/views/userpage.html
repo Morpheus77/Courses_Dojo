@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>My Page</title>
+		<meta name="Description" content="users landing page Norman Smith" charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" >
+	</head>
+	<body>
+		<div id="wrapper" >
+			Hello, {{user}}
+			friends:
+			{{friends_list}}  <a href="">view profile</a>  <a href="">remove from list</a>
+			
+			enemies:
+			{{non_friends}}a hef="">befriend</a>
+				
+			</form>
+		</div>
+	</body>
+</html>
